@@ -21,7 +21,7 @@ export const getStaticPaths = async () => {
   });
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 export const getStaticProps = async ({ params }) => {
@@ -40,6 +40,9 @@ export default function Blog({ post }) {
       setBody(post.fields.body);
     }
   }, [post.fields.body]);
+  if (!post) {
+  return <div></div>;
+  }
   return (
     <main>
       <div className={styles.Container}>
