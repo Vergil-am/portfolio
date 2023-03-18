@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 .Container {
   display: flex;
   flex-direction: column;
@@ -7,6 +9,7 @@
   border-radius: 20px;
   width: 50vw;
   margin-bottom: 40px;
+  font-family: 'Robot', sans-serif ;
 }
 .BlogPageImageContainer {
   width: 50vw; height: 50vh;
@@ -39,7 +42,6 @@
   height: 400px;
   background-color:  #1d1e22;
   border-radius: 10px;
-  font-family: 'Source Code Pro', cursive;
   position: relative;
   display: flex;
   align-items: flex-start;
