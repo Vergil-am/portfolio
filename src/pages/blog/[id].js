@@ -36,7 +36,7 @@ export const getStaticProps = async ({ params }) => {
 export default function Blog({ post }) {
   const [Body, setBody] = useState(null);
   useEffect(() => {
-    if (post) {
+    if (post != null) {
       if (post.fields.body != null) {
         setBody(post.fields.body);
       }}
