@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { createClient } from "contentful";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -9,8 +9,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { ReactTerminal } from "react-terminal";
 import { useRouter } from "next/router";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import EmailIcon from '@mui/icons-material/Email';
-import Link from "next/link";
+import EmailIcon from "@mui/icons-material/Email";
 
 export async function getStaticProps() {
   const client = createClient({
@@ -24,6 +23,7 @@ export async function getStaticProps() {
     props: {
       Projects: res.items,
     },
+    revalidate: 10,
   };
 }
 
@@ -38,8 +38,8 @@ export default function Home({ Projects }) {
 
   useEffect(() => {
     setLoaded(true);
-  });
-  const Welcome = <p>type "hello" to start</p>;
+  }, []);
+  const Welcome = <p>type &quot;hello&quot; to start</p>;
   const commands = {
     projects: () =>
       Projects.map((project, index) => (
@@ -134,6 +134,7 @@ export default function Home({ Projects }) {
                   }}
                 >
                   <img
+                    alt=""
                     src={Gallery[Index].fields.file.url}
                     style={{ width: "90%", borderRadius: "20px" }}
                   />
@@ -192,7 +193,6 @@ export default function Home({ Projects }) {
               style={{ display: visibility1 }}
               drag
               className={styles.window}
-
             >
               <button
                 className={styles.closeButton}
@@ -205,12 +205,14 @@ export default function Home({ Projects }) {
                 applications.
               </p>
               <p className={styles.Text2}>
-
-                type "about" to learn more about me.
+                type &quot;about&quot; to learn more about me.
                 <br />
-                type "projects" to see my projects, then type "project number"
-                to see that project. you can also click on the picture to see
-                more pictures. and type "blog" to see to go to my blog.<br />Enjoy.
+                type &quot;projects&quot; to see my projects, then type
+                &quot;project number&quot; to see that project. you can also
+                click on the picture to see more pictures. and type
+                &quot;blog&quot; to see to go to my blog.
+                <br />
+                Enjoy.
               </p>
               <div>
                 <h3 className={styles.Text5}>Welcome to my website :) </h3>
@@ -234,8 +236,7 @@ export default function Home({ Projects }) {
                 client satisfaction. <br />
               </p>
               <ul style={{ alignSelf: "flex-start" }}>
-                <p className={styles.Text3}>
-                  The main technologies i use:</p>
+                <p className={styles.Text3}>The main technologies i use:</p>
                 <li>React and React Native</li>
                 <li>NextJS</li>
                 <li>ExpressJS</li>
@@ -253,9 +254,19 @@ export default function Home({ Projects }) {
                 If you`re looking for a web developer who can help bring your
                 vision to life, feel free to get in touch!
               </p>
-              <div style={{ display: 'flex' }}>
-                <a style={{ textDecoration: 'none', marginRight: '20px' }} href='https://t.me/vergil_am'><TelegramIcon /></a>
-                <a style={{ textDecoration: 'none', color: 'white' }} href="mailto:olamine336@gmail.com"><EmailIcon /></a>
+              <div style={{ display: "flex" }}>
+                <a
+                  style={{ textDecoration: "none", marginRight: "20px" }}
+                  href='https://t.me/vergil_am'
+                >
+                  <TelegramIcon />
+                </a>
+                <a
+                  style={{ textDecoration: "none", color: "white" }}
+                  href="mailto:olamine336@gmail.com"
+                >
+                  <EmailIcon />
+                </a>
               </div>
             </motion.div>
           </AnimatePresence>
