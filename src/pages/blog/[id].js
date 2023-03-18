@@ -40,9 +40,6 @@ export default function Blog({ post }) {
       setBody(post.fields.body);
     }
   }, [post.fields.body]);
-  if (post == null) {
-  return (<div>Laoding...</div>);
-  }
   return (
     <main>
       <div className={styles.Container}>
