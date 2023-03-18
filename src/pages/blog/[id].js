@@ -21,7 +21,7 @@ export const getStaticPaths = async () => {
   });
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 export const getStaticProps = async ({ params }) => {
@@ -30,20 +30,15 @@ export const getStaticProps = async ({ params }) => {
     props: {
       post: entry,
     },
-    revalidate: 10,
   };
 };
 export default function Blog({ post }) {
   const [Body, setBody] = useState(null);
   useEffect(() => {
-    if (post != null) {
       if (post.fields.body != null) {
         setBody(post.fields.body);
-      }}
+      }
   }, [post.fields.body]);
-  if (!post) {
-    return (<div>loadinf...</div>)
-  }
   return (
     <main>
       <div className={styles.Container}>
