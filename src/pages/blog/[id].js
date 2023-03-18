@@ -40,7 +40,7 @@ export default function Blog({ post }) {
       setBody(post.fields.body);
     }
   }, [post.fields.body]);
-  if (!post) {
+  if (post == null) {
   return (<div>Laoding...</div>);
   }
   return (
