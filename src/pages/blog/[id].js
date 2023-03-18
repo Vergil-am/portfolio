@@ -41,7 +41,7 @@ export default function Blog({ post }) {
     }
   }, [post.fields.body]);
   if (!post) {
-  return <div></div>;
+  return (<div>Laoding...</div>);
   }
   return (
     <main>
