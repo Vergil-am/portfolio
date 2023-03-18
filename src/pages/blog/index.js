@@ -14,7 +14,6 @@ export async function getStaticProps(context) {
     props: {
       Posts: res.items,
     },
-    revalidate: 10,
   };
 }
 export default function Blog({ Posts }) {
