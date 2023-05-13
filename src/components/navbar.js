@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link className="navigationelement" href={"/"}>
           <HomeIcon /> <h2 className='navigationtitle'>Home</h2>
         </Link>
-        <Link className="navigationelement" href={"/blog"}>
+        <Link className="navigationelement" href={"https://vergil-am.hashnode.dev"}>
           <LibraryBooksIcon />
           <div className='navigationtitle'>Blog</div>
         </Link>
