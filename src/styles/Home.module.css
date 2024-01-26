@@ -161,6 +161,7 @@
 .image {
     margin: 10px;
     width: 50%;
+  object-fit: contain;
     align-self: flex-start;
     margin-top: 10vh;
 }
