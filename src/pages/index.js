@@ -199,8 +199,8 @@ export default function Home({ Projects }) {
               />
               <h1 style={{ color: "#9f8198", margin: "3%" }}>Hello,</h1>
               <p className={styles.Text1}>
-                I am amine an Algerian Full-Stack web developer, <br />
-                with a passion for creating dynamic and engaging web
+                I am amine an Algerian Full-Stack web and mobile developer, <br />
+                with a passion for creating dynamic and engaging
                 applications.
               </p>
               <p className={styles.Text2}>
