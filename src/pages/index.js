@@ -229,7 +229,7 @@ export default function Home({ Projects }) {
                 onClick={() => setVisibility2("none")}
               />
               <p className={styles.Text3}>
-                I am a freelance web developer using MERN stack and nextjs, my
+                I am a freelance developer, my
                 expertise lies in developing scalable, responsive, engaging and
                 robust web applications that ensure the best user experience and
                 client satisfaction. <br />
@@ -240,6 +240,8 @@ export default function Home({ Projects }) {
                 <li>NextJS</li>
                 <li>ExpressJS</li>
                 <li>Mongodb</li>
+                <li>SQL</li>
+                <li>Kotlin and android studio</li>
                 <li>different CMS and Headless CMS</li>
               </ul>
               <p
@@ -250,7 +252,7 @@ export default function Home({ Projects }) {
                   fontSize: "1em",
                 }}
               >
-                If you`re looking for a web developer who can help bring your
+                If you`re looking for a developer who can help bring your
                 vision to life, feel free to get in touch!
               </p>
               <div style={{ display: "flex" }}>
