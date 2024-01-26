@@ -135,7 +135,7 @@ export default function Home({ Projects }) {
                   <img
                     alt=""
                     src={Gallery[Index].fields.file.url}
-                    style={{ width: "90%" , height: "90%", borderRadius: "20px" }}
+                    style={{ width: "90%" , height: "90%", borderRadius: "20px", objectFit: "contain" }}
                   />
                 </motion.div>
                 <button
