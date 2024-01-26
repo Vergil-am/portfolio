@@ -12,7 +12,7 @@ export default function Window({ post }) {
             className={styles.mainImg}
             src={"https:" + post.fields.thumbnail.fields.file.url}
             fill
-            objectFit="cover"
+            objectFit="contain"
             style={{ borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}
           />
         </div>
